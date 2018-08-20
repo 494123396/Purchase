@@ -17,6 +17,7 @@ public class UserController {
     public ModelAndView login(User user, HttpSession session){
         User loginUser = userService.login(user);
         ModelAndView mv=null;
+        System.out.println("haha");
         if (loginUser==null){
            mv=new ModelAndView("/login.jsp");
             mv.addObject("erro","用户不存在");
